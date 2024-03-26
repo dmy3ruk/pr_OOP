@@ -1,0 +1,72 @@
+class Animal:
+    #def __init__(self):
+        pass
+
+
+class Herbivores(Animal):
+    def herbivores_info(self):
+        print("Herbivores")
+
+
+class Carnivores(Animal):
+    def carnivores_info(self):
+        print("Carnivores")
+
+
+class Cold_Blooded(Animal):
+    def cold_blooded_info(self):
+        print("Cold Blooded")
+
+
+class Warm_Blooded(Animal):
+    def warm_blooded_info(self):
+        print("Warm Blooded")
+
+
+class Artiodactyls(Herbivores, Warm_Blooded):
+    pass
+
+
+class Bears(Herbivores, Warm_Blooded):
+    pass
+
+
+class Snakes(Carnivores, Cold_Blooded):
+    pass
+
+
+class Cows(Artiodactyls):
+    pass
+
+
+class Brown_bear(Bears):
+    pass
+
+
+class Gizzy_bears(Bears):
+    pass
+
+
+class Poisonous(Snakes):
+    pass
+
+
+class Cobra(Poisonous):
+    pass
+
+
+class Nonpoisonous(Snakes):
+    pass
+
+
+class Adcler(Nonpoisonous):
+    pass
+
+bear = Brown_bear()
+print("bear:")
+bear.warm_blooded_info()
+bear.herbivores_info()
+print("cobra:")
+cobra = Cobra()
+cobra.cold_blooded_info()
+cobra.carnivores_info()
